@@ -1,0 +1,7 @@
+#!/bin/bash
+# https://developers.digitalocean.com/documentation/v2/#list-all-keys
+
+curl -X GET \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TF_VAR_do_api_token" \
+  "https://api.digitalocean.com/v2/account/keys" 
