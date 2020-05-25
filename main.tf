@@ -55,3 +55,7 @@ resource digitalocean_firewall web {
     destination_addresses = ["0.0.0.0/0", "::/0"]
   }
 }
+
+output droplet_ip_address {
+  value = digitalocean_droplet.ghost.ipv4_address
+}
